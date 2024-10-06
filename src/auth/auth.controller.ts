@@ -10,9 +10,10 @@ import {
 import { AuthService } from './auth.service';
 import { AuthDto } from './dto/auth.dto';
 import { Tokens } from './types';
-import { AuthGuard } from '@nestjs/passport';
+// import { AuthGuard } from '@nestjs/passport';
 // import { Request } from 'express';
-import { AtGuard, RtGuard } from 'src/common/guards';
+// import { AtGuard } from 'src/common/guards';
+import { RtGuard } from 'src/common/guards';
 import { GetCurrentUser, GetCurrentUserId, Public } from 'src/common/decorators';
 
 @Controller('auth')

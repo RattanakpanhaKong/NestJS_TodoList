@@ -6,7 +6,9 @@ import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.setGlobalPrefix('api/v1')
   app.useGlobalPipes(new ValidationPipe());
+  app.enableCors({origin:'http://localhost:4200', credentials: true})
 
   // const reflector = new Reflector();
   // app.useGlobalGuards(new AtGuard(reflector)); // apply AtGuard to all route in application
